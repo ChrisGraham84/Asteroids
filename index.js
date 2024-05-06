@@ -465,11 +465,13 @@ window.addEventListener("keydown", (e) => {
           gameMenu.innerHTML = "PAUSED";
         }
         //console.log("paused = ", isPaused);
+      }else{
+          window.location.reload();
       }
       break;
     case "Space":
       if (isGameOver) {
-        window.location.reload();
+      
       } else {
         projectiles.push(
           new Projetile({
@@ -566,7 +568,7 @@ function gameLoop() {
   if (gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
     if (can_fire) {
       if (isGameOver) {
-        window.location.reload();
+       // window.location.reload();
       } else {
         projectiles.push(
           new Projetile({
