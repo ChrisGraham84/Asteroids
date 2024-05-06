@@ -42,6 +42,15 @@ class Player {
 
   update() {
     this.draw();
+    if(this.position.y < 10){
+      this.position.y = 15;
+    }else if(this.position.x < 10){
+      this.position.x = 15;
+    }else if(this.position.y > canvas.height - 10){
+      this.position.y =  canvas.height - 15;
+    }else if(this.position.x > canvas.width - 10){
+      this.position.x =  canvas.width - 15;
+    }
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
   }
